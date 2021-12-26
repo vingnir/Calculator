@@ -25,11 +25,11 @@ namespace Calculator.Tests
 
         // Test Addition overloaded method with Array args
         [Theory]
-        [InlineData(new object[] { new double[] { 10, 30, 30 }, 70 })]
-        [InlineData(new object[] { new double[] { 0, 0, 1, 0, 0 }, 1 })]
-        [InlineData(new object[] { new double[] { 50, 100, 200, 300, 1000 }, 1650 })]
-        [InlineData(new object[] { new double[] { 50, 100, 200, 300, 1000, 0, 0, 1 }, 1651 })]
-        [InlineData(new object[] { new double[] { 100, double.MaxValue }, double.MaxValue })]
+        [InlineData(new double[] { 10, 30, 30 }, 70)]
+        [InlineData(new double[] { 0, 0, 1, 0, 0 }, 1)]
+        [InlineData(new double[] { 50, 100, 200, 300, 1000 }, 1650)]
+        [InlineData(new double[] { 50, 100, 200, 300, 1000, 0, 0, 1 }, 1651)]
+        [InlineData(new double[] { 100, double.MaxValue }, double.MaxValue)]
         public void Addition_SumShouldBeReturnedFromArray(double[] inputArray, double expected)
         {
             // Arrange
@@ -62,10 +62,10 @@ namespace Calculator.Tests
 
         // Test Subtraction overloaded method with Array args
         [Theory]
-        [InlineData(new object[] { new double[] { 10, 5, 5 }, 0 })]
-        [InlineData(new object[] { new double[] { 0, 5, 5, 5, 5 }, -20 })]
-        [InlineData(new object[] { new double[] { 50, 100, 0, 0, 1 }, -51 })]
-        [InlineData(new object[] { new double[] { 100, double.MaxValue }, double.MinValue })]
+        [InlineData(new double[] { 10, 5, 5 }, 0)]
+        [InlineData(new double[] { 0, 5, 5, 5, 5 }, -20)]
+        [InlineData(new double[] { 50, 100, 0, 0, 1 }, -51)]
+        [InlineData(new double[] { 100, double.MaxValue }, double.MinValue)]
         public void Subtraction_DifferenceShouldBeReturnedFromArray(double[] inputArray, double expected)
         {
             // Arrange
@@ -95,8 +95,8 @@ namespace Calculator.Tests
 
         // Test Multiplication overloaded method with Array args
         [Theory]
-        [InlineData(new object[] { new double[] { 10, 5, 5 }, 250 })]
-        [InlineData(new object[] { new double[] { 100, double.MaxValue }, double.PositiveInfinity })]
+        [InlineData(new double[] { 10, 5, 5 }, 250)]
+        [InlineData(new double[] { 100, double.MaxValue }, double.PositiveInfinity)]
         public void Multiplication_ProductShouldBeReturnedFromArray(double[] inputArray, double expected)
         {
             // Arrange
@@ -125,8 +125,8 @@ namespace Calculator.Tests
 
         // Test Division overloaded method with Array args
         [Theory]
-        [InlineData(new object[] { new double[] { 10, 5, 2 }, 1 })]
-        [InlineData(new object[] { new double[] { 100, 10, 2 }, 5 })]
+        [InlineData(new double[] { 10, 5, 2 }, 1)]
+        [InlineData(new double[] { 100, 10, 2 }, 5)]
         public void Division_QuotientShouldBeReturnedFromArray(double[] inputArray, double expected)
         {
             // Arrange
